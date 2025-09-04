@@ -2,8 +2,14 @@ using System;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        Console.WriteLine("Hello World! This is the Exercise1 Project.");
+        Console.Write("Enter your name: ");
+        string name = Console.ReadLine();
+
+        Console.Write("Enter your favorite color: ");
+        string color = Console.ReadLine();
+
+        Console.WriteLine($"Nice to meet you, {name}. {color} is a great color!");
     }
 }
