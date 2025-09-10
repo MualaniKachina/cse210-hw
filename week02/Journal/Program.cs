@@ -1,3 +1,32 @@
+/*
+How My Program Exceeds the Core Requirements
+
+1. Separation of Concerns
+   - Instead of keeping all logic inside Main(), I used separate classes (Journal, Entry, and PromptGenerator) 
+     to handle different parts of the program.
+   - This makes the program easier to maintain, extend, and reuse.
+
+2. Randomized Prompts
+   - The program doesn’t just ask for free-form entries — it generates a random writing prompt with PromptGenerator.GetRandomPrompt().
+   - This adds variety and makes journaling more engaging, which was beyond the minimum requirements.
+
+3. File Handling (Save & Load)
+   - The journal entries can be saved to a file and loaded back later.
+   - This persistence feature allows users to keep their writing between sessions, going beyond just temporary in-memory storage.
+
+4. User-Friendly Menu System
+   - A clear menu loop (while (running)) is implemented so the user can continuously interact with the program without restarting it.
+   - Input validation is also included for wrong menu choices (default: Console.WriteLine("Invalid choice.")).
+
+5. Timestamps for Entries
+   - Each entry automatically records the current date (DateTime.Now.ToShortDateString()), 
+     adding useful context to journal entries without requiring extra effort from the user.
+
+In short: My program not only meets the core requirements (write, display, save, load, quit), 
+but also improves usability, structure, and functionality with random prompts, file persistence, 
+error handling, and organized code design.
+*/
+
 using System;
 
 class Program
