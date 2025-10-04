@@ -7,6 +7,17 @@ class Program
     {
         GoalManager goalManager = new GoalManager();
 
+        // 🌟 Creative Additions 🌟
+        // Preloaded goals simulate a real-life scenario (health, spiritual, social)
+        // Variety of goal types encourages different types of engagement
+        // Adds gamification elements like scoring and checklist bonuses
+
+        // Fun welcome message to engage the user
+        Console.WriteLine("=====================================");
+        Console.WriteLine("   Welcome to the Eternal Quest! 🎯  ");
+        Console.WriteLine(" Track your goals. Earn points. Win. ");
+        Console.WriteLine("=====================================\n");
+
         // Add initial goals to the manager
         goalManager.AddGoal(new SimpleGoal("Run Marathon", "Complete a full marathon", 1000));
         goalManager.AddGoal(new EternalGoal("Read Scriptures", "Read scriptures daily", 100));
@@ -29,7 +40,7 @@ class Program
             {
                 case "1":
                     goalManager.DisplayGoals();
-                    Console.WriteLine($"Total Score: {goalManager.Score}");
+                    Console.WriteLine($"💡 Total Score: {goalManager.Score} points");
                     break;
 
                 case "2":
@@ -41,27 +52,27 @@ class Program
                     }
                     else
                     {
-                        Console.WriteLine("Invalid goal number.");
+                        Console.WriteLine("❌ Invalid goal number.");
                     }
                     break;
 
                 case "3":
                     goalManager.SaveGoals("goals.txt");
-                    Console.WriteLine("Goals saved!");
+                    Console.WriteLine("✅ Goals saved!");
                     break;
 
                 case "4":
                     goalManager.LoadGoals("goals.txt");
-                    Console.WriteLine("Goals loaded!");
+                    Console.WriteLine("📂 Goals loaded!");
                     break;
 
                 case "5":
                     running = false;
-                    Console.WriteLine("Goodbye!");
+                    Console.WriteLine("👋 Goodbye! Stay motivated and keep striving!");
                     break;
 
                 default:
-                    Console.WriteLine("Invalid option, try again.");
+                    Console.WriteLine("⚠️ Invalid option, try again.");
                     break;
             }
         }
